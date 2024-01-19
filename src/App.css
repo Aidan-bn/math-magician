@@ -31,7 +31,6 @@ nav > menu {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  /* border: 2px solid #df0e0e; */
 }
 
 .calculator {
@@ -102,7 +101,6 @@ nav > menu {
   width: 95%;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  /* height: 10px; */
   margin: auto;
   gap: 3px;
 }
