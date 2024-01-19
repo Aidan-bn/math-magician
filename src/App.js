@@ -4,6 +4,7 @@ import Home from './Home';
 import Calculator from './Calculator';
 import Quote from './Quote';
 import Footer from './Footer';
+import CalculatorProvider from './context/Context';
 
 function App() {
 //   let place = "Unknown";
@@ -16,14 +17,16 @@ function App() {
 // }
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/calculator" element={<Calculator />} />
-          <Route path="/quote" element={<Quote />} />
-        </Routes>
-      </BrowserRouter>
-      <Footer />
+      <CalculatorProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/quote" element={<Quote />} />
+          </Routes>
+        </BrowserRouter>
+        <Footer />
+      </CalculatorProvider>
     </>
   );
 }
