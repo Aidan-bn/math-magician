@@ -4,9 +4,9 @@ import Home from './Home';
 import Calculator from './Calculator';
 import Quote from './Quote';
 import Footer from './Footer';
-import CalculatorProvider from './context/Context';
+import { CalculateContext } from './context/Context';
 
-function App() {
+function App(children) {
 //   let place = "Unknown";
 // switch (SomeCondition)
 // {
@@ -17,7 +17,7 @@ function App() {
 // }
   return (
     <>
-      <CalculatorProvider>
+      <CalculateContext.Provider value={children}>
         <BrowserRouter>
           <Routes>
             <Route path="/" exact element={<Home />} />
@@ -25,8 +25,8 @@ function App() {
             <Route path="/quote" element={<Quote />} />
           </Routes>
         </BrowserRouter>
-        <Footer />
-      </CalculatorProvider>
+      </CalculateContext.Provider>
+      <Footer />
     </>
   );
 }

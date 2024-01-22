@@ -1,4 +1,4 @@
-import Display from './Display';
+// import Display from './Display';
 
 const Button = () => {
   const buttons = [['C', '+/-', '%', '/'], [7, 8, 9, 'X'], [4, 5, 6, '-'], [1, 2, 3, '+'], [0, '.', '=']];
@@ -17,11 +17,15 @@ const Button = () => {
   return (
     <>
       <div className="top">
-        <Display />
+        {/* <Display /> */}
+        <div className="screen">
+          12334440
+        </div>
         <div className="button-area">
           {buttons.flat().map((button) => (
             <button
               type="button"
+              value={button}
               key={button}
               className={`${specialColor(button)} btn-content`}
             >
