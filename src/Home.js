@@ -1,4 +1,5 @@
 import Nav from './Nav';
+import Display from './Display';
 
 const Home = () => (
   <>
@@ -7,6 +8,7 @@ const Home = () => (
       <h4>
         You wanna perform calculations? Youre in a Right place.
       </h4>
+      <Display />
       <p>
         We highly recommend you to download our mobile application to make
         it easy to use our calculator
