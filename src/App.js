@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CalculateContext } from './context/Context';
 import './App.css';
 import Home from './Home';
 import Calculator from './Calculator';
 import Quote from './Quote';
 import Footer from './Footer';
-import { CalculateContext } from './context/Context';
 
-function App(children) {
+function App() {
 //   let place = "Unknown";
 // switch (SomeCondition)
 // {
@@ -17,7 +17,7 @@ function App(children) {
 // }
   return (
     <>
-      <CalculateContext.Provider value={children}>
+      <CalculateContext.Provider>
         <BrowserRouter>
           <Routes>
             <Route path="/" exact element={<Home />} />

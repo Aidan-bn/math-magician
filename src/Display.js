@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { CalculateContext } from './context/Context';
 
 const Display = () => {
-  const calculate = useContext(CalculateContext);
+  const { calculate } = useContext(CalculateContext);
 
   return (
     <>
