@@ -1,5 +1,7 @@
+/* eslint-disable import/named */
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CalculateContext } from './context/Context';
+import CalculateContext from './context/Context';
 import './App.css';
 import Home from './Home';
 import Calculator from './Calculator';
@@ -7,17 +9,15 @@ import Quote from './Quote';
 import Footer from './Footer';
 
 function App() {
-//   let place = "Unknown";
-// switch (SomeCondition)
-// {
-//   case condition1: place = "Ukraine"; break;
-//   case condition2: place = "Russia"; break;
-//   case condition3: place = "US"; break;
-//   default: place = "World"; break;
-// }
+  const [calculate, setCalculate] = React.useState({
+    operator: '',
+    num: 0,
+    response: 0,
+  });
+
   return (
     <>
-      <CalculateContext.Provider>
+      <CalculateContext.Provider value={{ calculate, setCalculate }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" exact element={<Home />} />
